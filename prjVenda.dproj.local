@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2022/10/18 20:09:28.657,=C:\Users\etec\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/18 20:09:45.972,C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\untVenda.dfm=C:\Users\etec\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/10/18 20:09:45.972,C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\untVenda.pas=C:\Users\etec\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/18 20:09:51.014,C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\prjVenda.dproj=C:\Users\etec\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
