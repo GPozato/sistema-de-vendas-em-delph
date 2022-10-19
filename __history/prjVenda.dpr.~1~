@@ -2,13 +2,13 @@ program prjVenda;
 
 uses
   Vcl.Forms,
-  untVenda in 'untVenda.pas' {frmPrincipal};
+  untVenda in 'untVenda.pas' {Form1};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TForm1, Form1);
   Application.Run;
 end.
