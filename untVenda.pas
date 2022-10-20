@@ -20,6 +20,7 @@ type
     Timer: TTimer;
     Image1: TImage;
     procedure TimerTimer(Sender: TObject);
+    procedure SAIR1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -32,6 +33,12 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TfrmPrincipal.SAIR1Click(Sender: TObject);
+begin
+    if Application.MessageBox('Deseja Sair?','Confirme', MB_YESNO+MB_DEFBUTTON2+MB_ICONQUESTION) =idyes then
+      Application.Terminate;
+end;
 
 procedure TfrmPrincipal.TimerTimer(Sender: TObject);
 begin

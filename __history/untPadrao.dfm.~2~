@@ -1,0 +1,108 @@
+object frmPadrao: TfrmPadrao
+  Left = 0
+  Top = 0
+  Caption = 'frmPadrao'
+  ClientHeight = 472
+  ClientWidth = 727
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsMDIChild
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  ShowHint = True
+  Visible = True
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnlBotoes: TPanel
+    Left = 0
+    Top = 392
+    Width = 727
+    Height = 80
+    Align = alBottom
+    TabOrder = 0
+    ExplicitTop = 431
+    object btnAdicionar: TBitBtn
+      Left = 1
+      Top = 2
+      Width = 75
+      Height = 78
+      Caption = 'Adicionar'
+      Layout = blGlyphTop
+      TabOrder = 0
+      OnClick = btnAdicionarClick
+    end
+    object BtnAlterar: TBitBtn
+      Left = 76
+      Top = 2
+      Width = 75
+      Height = 78
+      Caption = 'Alterar'
+      Layout = blGlyphTop
+      TabOrder = 1
+    end
+    object btnExcluir: TBitBtn
+      Left = 151
+      Top = 2
+      Width = 75
+      Height = 78
+      Caption = 'Excluir'
+      Layout = blGlyphTop
+      TabOrder = 2
+    end
+    object btnSalvar: TBitBtn
+      Left = 226
+      Top = 2
+      Width = 75
+      Height = 78
+      Caption = 'Salvar'
+      Enabled = False
+      Layout = blGlyphTop
+      TabOrder = 3
+    end
+    object btnCancelar: TBitBtn
+      Left = 301
+      Top = 2
+      Width = 75
+      Height = 78
+      Caption = 'Cancelar'
+      Enabled = False
+      Layout = blGlyphTop
+      TabOrder = 4
+    end
+    object btnPesquisar: TBitBtn
+      Left = 376
+      Top = 2
+      Width = 75
+      Height = 78
+      Caption = 'Pesquisar'
+      Layout = blGlyphTop
+      TabOrder = 5
+    end
+    object btnSelecionar: TBitBtn
+      Left = 451
+      Top = 2
+      Width = 75
+      Height = 78
+      Caption = 'Selecionar'
+      Layout = blGlyphTop
+      TabOrder = 6
+    end
+    object btnFechar: TBitBtn
+      Left = 526
+      Top = 2
+      Width = 75
+      Height = 78
+      Caption = 'Fechar'
+      Layout = blGlyphTop
+      TabOrder = 7
+    end
+  end
+  object dts: TDataSource
+    Left = 680
+    Top = 416
+  end
+end

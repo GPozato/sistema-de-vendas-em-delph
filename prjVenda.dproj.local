@@ -1,9 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2022/10/18 20:09:28.657,=C:\Users\etec\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/10/18 20:09:45.972,C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\untVenda.dfm=C:\Users\etec\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2022/10/18 20:09:45.972,C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\untVenda.pas=C:\Users\etec\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/10/18 20:09:51.014,C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\prjVenda.dproj=C:\Users\etec\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+	<Transactions>
+    <Transaction>2022/10/18 20:09:28.000.657,=C:\Users\etec\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/18 20:09:45.000.972,C:\Users\etec\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\untVenda.dfm</Transaction>
+    <Transaction>2022/10/18 20:09:45.000.972,C:\Users\etec\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\untVenda.pas</Transaction>
+    <Transaction>2022/10/18 20:09:51.000.014,C:\Users\etec\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\prjVenda.dproj</Transaction>
+    <Transaction>2022/10/20 19:44:38.278,=C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\Unit1.pas</Transaction>
+    <Transaction>2022/10/20 19:50:09.718,C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\untPadrao.dfm=C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\Unit1.dfm</Transaction>
+    <Transaction>2022/10/20 19:50:09.718,C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\untPadrao.pas=C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

@@ -2,7 +2,8 @@ program prjVenda;
 
 uses
   Vcl.Forms,
-  untVenda in 'untVenda.pas' {frmPrincipal};
+  untVenda in 'untVenda.pas' {frmPrincipal},
+  untPadrao in 'untPadrao.pas' {frmPadrao};
 
 {$R *.res}
 

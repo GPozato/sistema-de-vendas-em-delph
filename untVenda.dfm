@@ -10,6 +10,7 @@ object frmPrincipal: TfrmPrincipal
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  FormStyle = fsMDIForm
   Menu = Menu
   OldCreateOrder = False
   WindowState = wsMaximized
@@ -3976,9 +3977,6 @@ object frmPrincipal: TfrmPrincipal
       item
         Width = 50
       end>
-    ExplicitLeft = 264
-    ExplicitTop = 232
-    ExplicitWidth = 0
   end
   object Menu: TMainMenu
     Left = 16
@@ -4000,6 +3998,7 @@ object frmPrincipal: TfrmPrincipal
     end
     object SAIR1: TMenuItem
       Caption = 'Sair'
+      OnClick = SAIR1Click
     end
   end
   object Timer: TTimer
