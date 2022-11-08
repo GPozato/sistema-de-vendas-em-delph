@@ -11,7 +11,7 @@ type
   TfrmPadrao = class(TForm)
     pnlBotoes: TPanel;
     btnAdicionar: TBitBtn;
-    BtnAlterar: TBitBtn;
+    btnAlterar: TBitBtn;
     btnExcluir: TBitBtn;
     btnSalvar: TBitBtn;
     btnCancelar: TBitBtn;
@@ -22,11 +22,11 @@ type
     dbg: TDBGrid;
     pnlCampos: TPanel;
     procedure btnAdicionarClick(Sender: TObject);
+    procedure btnAlterarClick(Sender: TObject);
     procedure btnExcluirClick(Sender: TObject);
     procedure btnSalvarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
     procedure btnFecharClick(Sender: TObject);
-    procedure BtnAlterarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
   private
@@ -49,27 +49,29 @@ begin
     habilita(false);
 end;
 
-procedure TfrmPadrao.BtnAlterarClick(Sender: TObject);
+procedure TfrmPadrao.btnAlterarClick(Sender: TObject);
 begin
-    dts.DataSet.Edit;
-    habilita(false);
+   dts.DataSet.Edit;
+   habilita(false);
 end;
 
 procedure TfrmPadrao.btnCancelarClick(Sender: TObject);
 begin
-  dts.DataSet.Cancel;
-  habilita(true);
+    dts.DataSet.Cancel;
+    habilita(true);
 end;
 
 procedure TfrmPadrao.btnExcluirClick(Sender: TObject);
 begin
-    if Application.MessageBox('Deseja Excluir?','Confirme', MB_YESNO+MB_DEFBUTTON2+MB_ICONQUESTION) =idyes then
-      dts.DataSet.Delete;
+    if Application.MessageBox('Deseja Excluir?','Confirme',
+       MB_YESNO+MB_DEFBUTTON2+MB_ICONQUESTION) = idyes then
+         dts.DataSet.Delete;
+
 end;
 
 procedure TfrmPadrao.btnFecharClick(Sender: TObject);
 begin
-  close;
+     close;
 end;
 
 procedure TfrmPadrao.btnSalvarClick(Sender: TObject);
@@ -85,7 +87,7 @@ end;
 
 procedure TfrmPadrao.FormDestroy(Sender: TObject);
 begin
-    dts.DataSet.Close;
+     dts.DataSet.Close;
 end;
 
 procedure TfrmPadrao.habilita(ativa: boolean);

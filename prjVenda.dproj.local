@@ -1,18 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>2022/10/18 20:09:28.000.657,=C:\Users\etec\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/10/18 20:09:45.000.972,C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\untVenda.dfm=C:\Users\etec\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2022/10/18 20:09:45.000.972,C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\untVenda.pas=C:\Users\etec\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/10/18 20:09:51.000.014,C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\prjVenda.dproj=C:\Users\etec\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
-    <Transaction>2022/10/20 19:44:38.000.278,=C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\Unit1.pas</Transaction>
-    <Transaction>2022/10/20 19:50:09.000.718,C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\Unit1.dfm=C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\untPadrao.dfm</Transaction>
-    <Transaction>2022/10/20 19:50:09.000.718,C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\Unit1.pas=C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\untPadrao.pas</Transaction>
-    <Transaction>2022/10/27 19:56:29.029,=C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\Unit1.pas</Transaction>
-    <Transaction>2022/10/27 20:02:13.199,C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\untModulo.dfm=C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\Unit1.dfm</Transaction>
-    <Transaction>2022/10/27 20:02:13.199,C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\untModulo.pas=C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\Unit1.pas</Transaction>
-    <Transaction>2022/10/27 20:23:47.200,=C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\Unit1.pas</Transaction>
-    <Transaction>2022/10/27 20:25:24.259,C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\untCadCidade.pas=C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\Unit1.pas</Transaction>
-    <Transaction>2022/10/27 20:25:24.259,C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\untCadCidade.dfm=C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\Unit1.dfm</Transaction>
+    <Transaction>2022/07/26 19:14:06.000.673,=C:\Users\edriano.campana\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/01 19:12:18.000.895,=C:\Users\edriano.campana\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/18 20:03:30.000.458,=C:\Users\edriano.campana\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/18 20:04:29.000.231,R:\Ens Tecnico\DESENVOLVIMENTO DE SISTEMAS\2 Modulo\Desenvolvimento de Sistemas\Sistema_Venda\untPrincipal.dfm=C:\Users\edriano.campana\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/10/18 20:04:29.000.231,R:\Ens Tecnico\DESENVOLVIMENTO DE SISTEMAS\2 Modulo\Desenvolvimento de Sistemas\Sistema_Venda\untPrincipal.pas=C:\Users\edriano.campana\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/18 20:04:35.000.699,R:\Ens Tecnico\DESENVOLVIMENTO DE SISTEMAS\2 Modulo\Desenvolvimento de Sistemas\Sistema_Venda\prjVenda.dproj=C:\Users\edriano.campana\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/10/20 19:43:19.000.425,=C:\Users\edriano.campana\Desktop\versao_2010\Unit1.pas</Transaction>
+    <Transaction>2022/10/20 19:50:03.000.250,C:\Users\edriano.campana\Desktop\versao_2010\Unit1.dfm=C:\Users\edriano.campana\Desktop\versao_2010\untPadrao.dfm</Transaction>
+    <Transaction>2022/10/20 19:50:03.000.250,C:\Users\edriano.campana\Desktop\versao_2010\Unit1.pas=C:\Users\edriano.campana\Desktop\versao_2010\untPadrao.pas</Transaction>
+    <Transaction>2022/10/27 19:58:46.000.119,=C:\Users\edriano.campana\Desktop\versao_2510\Unit1.pas</Transaction>
+    <Transaction>2022/10/27 20:01:00.000.852,C:\Users\edriano.campana\Desktop\versao_2510\Unit1.pas=C:\Users\edriano.campana\Desktop\versao_2510\untModulo.pas</Transaction>
+    <Transaction>2022/10/27 20:01:00.000.852,C:\Users\edriano.campana\Desktop\versao_2510\Unit1.dfm=C:\Users\edriano.campana\Desktop\versao_2510\untModulo.dfm</Transaction>
+    <Transaction>2022/10/27 20:23:38.000.583,=C:\Users\edriano.campana\Desktop\versao_2510\Unit1.pas</Transaction>
+    <Transaction>2022/10/27 20:25:21.000.926,C:\Users\edriano.campana\Desktop\versao_2510\Unit1.pas=C:\Users\edriano.campana\Desktop\versao_2510\untCadCidade.pas</Transaction>
+    <Transaction>2022/10/27 20:25:21.000.926,C:\Users\edriano.campana\Desktop\versao_2510\Unit1.dfm=C:\Users\edriano.campana\Desktop\versao_2510\untCadCidade.dfm</Transaction>
+    <Transaction>2022/11/01 19:44:09.000.036,=C:\Users\edriano.campana\Desktop\versao_3110\Unit1.pas</Transaction>
+    <Transaction>2022/11/01 19:44:47.000.594,C:\Users\edriano.campana\Desktop\versao_3110\Unit1.pas=C:\Users\edriano.campana\Desktop\versao_3110\untCadProduto.pas</Transaction>
+    <Transaction>2022/11/01 19:44:47.000.594,C:\Users\edriano.campana\Desktop\versao_3110\Unit1.dfm=C:\Users\edriano.campana\Desktop\versao_3110\untCadProduto.dfm</Transaction>
+    <Transaction>2022/11/03 19:39:11.000.448,=C:\Users\edriano.campana\Desktop\versao_0111\Unit1.pas</Transaction>
+    <Transaction>2022/11/03 19:40:45.000.480,C:\Users\edriano.campana\Desktop\versao_0111\untCadCliente.dfm=C:\Users\edriano.campana\Desktop\versao_0111\Unit1.dfm</Transaction>
+    <Transaction>2022/11/03 19:40:45.000.480,C:\Users\edriano.campana\Desktop\versao_0111\untCadCliente.pas=C:\Users\edriano.campana\Desktop\versao_0111\Unit1.pas</Transaction>
+    <Transaction>2022/11/08 19:30:39.000.610,=C:\Users\etec\Desktop\versao_0311\Unit1.pas</Transaction>
+    <Transaction>2022/11/08 19:30:53.000.672,C:\Users\etec\Desktop\versao_0311\Unit1.pas=C:\Users\etec\Desktop\versao_0311\untPadraoPesquisa.pas</Transaction>
+    <Transaction>2022/11/08 19:30:53.000.672,C:\Users\etec\Desktop\versao_0311\Unit1.dfm=C:\Users\etec\Desktop\versao_0311\untPadraoPesquisa.dfm</Transaction>
+    <Transaction>2022/11/08 19:45:05.000.195,=C:\Users\etec\Desktop\versao_0311\Unit1.pas</Transaction>
+    <Transaction>2022/11/08 19:45:31.000.665,C:\Users\etec\Desktop\versao_0311\Unit1.dfm=C:\Users\etec\Desktop\versao_0311\untPesCidade.dfm</Transaction>
+    <Transaction>2022/11/08 19:45:31.000.665,C:\Users\etec\Desktop\versao_0311\Unit1.pas=C:\Users\etec\Desktop\versao_0311\untPesCidade.pas</Transaction>
   </Transactions>
 </BorlandProject>

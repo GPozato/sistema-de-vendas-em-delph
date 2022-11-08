@@ -2,55 +2,59 @@ inherited frmCadCidade: TfrmCadCidade
   Caption = 'Cadastro de Cidades'
   PixelsPerInch = 96
   TextHeight = 13
+  inherited pnlBotoes: TPanel
+    inherited btnPesquisar: TBitBtn
+      OnClick = btnPesquisarClick
+    end
+  end
   inherited pnlCampos: TPanel
-    ExplicitLeft = 1
-    ExplicitTop = 116
     object Label1: TLabel
-      Left = 16
-      Top = 40
+      Left = 24
+      Top = 8
       Width = 33
       Height = 13
       Caption = 'C'#243'digo'
-      FocusControl = DBEdit1
+      FocusControl = dbCodCidade
     end
     object Label2: TLabel
-      Left = 16
-      Top = 80
+      Left = 24
+      Top = 48
       Width = 27
       Height = 13
       Caption = 'Nome'
-      FocusControl = DBEdit2
+      FocusControl = dbeNomeCidade
     end
     object Label3: TLabel
-      Left = 16
-      Top = 120
+      Left = 24
+      Top = 88
       Width = 22
       Height = 13
       Caption = 'Sigla'
-      FocusControl = DBEdit3
+      FocusControl = dbeSiglaEstado
     end
-    object DBEdit1: TDBEdit
-      Left = 16
-      Top = 53
-      Width = 60
+    object dbCodCidade: TDBEdit
+      Left = 24
+      Top = 24
+      Width = 52
       Height = 21
       DataField = 'IDCIDADE'
       DataSource = dts
+      ReadOnly = True
       TabOrder = 0
     end
-    object DBEdit2: TDBEdit
-      Left = 16
-      Top = 96
-      Width = 210
+    object dbeNomeCidade: TDBEdit
+      Left = 24
+      Top = 64
+      Width = 241
       Height = 21
       DataField = 'NOMECIDADE'
       DataSource = dts
       TabOrder = 1
     end
-    object DBEdit3: TDBEdit
-      Left = 16
-      Top = 136
-      Width = 30
+    object dbeSiglaEstado: TDBEdit
+      Left = 24
+      Top = 104
+      Width = 27
       Height = 21
       DataField = 'SIGLAESTADO'
       DataSource = dts
@@ -58,6 +62,6 @@ inherited frmCadCidade: TfrmCadCidade
     end
   end
   inherited dts: TDataSource
-    DataSet = Modulo.QueryCidade
+    DataSet = modulo.qryCidade
   end
 end

@@ -1,55 +1,149 @@
-object Modulo: TModulo
+object modulo: Tmodulo
   OldCreateOrder = False
-  Height = 287
-  Width = 446
+  Height = 439
+  Width = 736
   object conexao: TFDConnection
     Params.Strings = (
       'Database=venda'
       'User_Name=root'
       'DriverID=MySQL')
-    Connected = True
     LoginPrompt = False
-    Left = 40
+    Left = 56
     Top = 32
   end
-  object WaitCursor: TFDGUIxWaitCursor
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
     Provider = 'Forms'
-    Left = 104
+    Left = 184
     Top = 32
   end
-  object MySQLDriverLink: TFDPhysMySQLDriverLink
-    VendorLib = 
-      'C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\libmys' +
-      'ql.dll'
-    Left = 176
+  object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
+    VendorLib = 'C:\Users\etec\Desktop\versao_0311\libmysql.dll'
+    Left = 336
     Top = 32
   end
-  object QueryCidade: TFDQuery
+  object qryCidade: TFDQuery
     Connection = conexao
     SQL.Strings = (
-      'SELECT * FROM CIDADE')
-    Left = 40
-    Top = 96
-    object QueryCidadeIDCIDADE: TIntegerField
+      'select * from cidade')
+    Left = 56
+    Top = 120
+    object qryCidadeIDCIDADE: TIntegerField
       DisplayLabel = 'C'#243'digo'
       FieldName = 'IDCIDADE'
       Origin = 'IDCIDADE'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object QueryCidadeNOMECIDADE: TStringField
+    object qryCidadeNOMECIDADE: TStringField
       AutoGenerateValue = arDefault
       DisplayLabel = 'Nome'
       FieldName = 'NOMECIDADE'
       Origin = 'NOMECIDADE'
       Size = 50
     end
-    object QueryCidadeSIGLAESTADO: TStringField
+    object qryCidadeSIGLAESTADO: TStringField
       AutoGenerateValue = arDefault
       DisplayLabel = 'Sigla'
       FieldName = 'SIGLAESTADO'
       Origin = 'SIGLAESTADO'
       Size = 2
+    end
+  end
+  object qryAutoNum: TFDQuery
+    Connection = conexao
+    Left = 56
+    Top = 184
+  end
+  object qryProduto: TFDQuery
+    Connection = conexao
+    SQL.Strings = (
+      'SELECT * FROM PRODUTO')
+    Left = 176
+    Top = 120
+    object qryProdutoIDPRODUTO: TIntegerField
+      DisplayLabel = 'C'#243'digo'
+      FieldName = 'IDPRODUTO'
+      Origin = 'IDPRODUTO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryProdutoDESCRPRODUTO: TStringField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Descri'#231#227'o'
+      FieldName = 'DESCRPRODUTO'
+      Origin = 'DESCRPRODUTO'
+      Size = 50
+    end
+    object qryProdutoVALORPRODUTO: TBCDField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Valor'
+      FieldName = 'VALORPRODUTO'
+      Origin = 'VALORPRODUTO'
+      currency = True
+      Precision = 8
+      Size = 2
+    end
+    object qryProdutoQTDEPRODUTO: TIntegerField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Quantidade'
+      FieldName = 'QTDEPRODUTO'
+      Origin = 'QTDEPRODUTO'
+    end
+  end
+  object qryCliente: TFDQuery
+    Connection = conexao
+    SQL.Strings = (
+      'SELECT * FROM CLIENTE')
+    Left = 288
+    Top = 120
+    object qryClienteIDCLIENTE: TIntegerField
+      DisplayLabel = 'C'#243'digo'
+      FieldName = 'IDCLIENTE'
+      Origin = 'IDCLIENTE'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryClienteNOMECLIENTE: TStringField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Nome'
+      FieldName = 'NOMECLIENTE'
+      Origin = 'NOMECLIENTE'
+      Size = 50
+    end
+    object qryClienteENDERCLIENTE: TStringField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Endere'#231'o'
+      FieldName = 'ENDERCLIENTE'
+      Origin = 'ENDERCLIENTE'
+      Size = 50
+    end
+    object qryClienteCPFCLIENTE: TStringField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'CPF'
+      FieldName = 'CPFCLIENTE'
+      Origin = 'CPFCLIENTE'
+    end
+    object qryClienteFONECLIENTE: TStringField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Telefone'
+      FieldName = 'FONECLIENTE'
+      Origin = 'FONECLIENTE'
+    end
+    object qryClienteIDCIDADE: TIntegerField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Cidade'
+      FieldName = 'IDCIDADE'
+      Origin = 'IDCIDADE'
+    end
+    object qryClienteNOMECIDADE: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NOMECIDADE'
+      LookupDataSet = qryCidade
+      LookupKeyFields = 'IDCIDADE'
+      LookupResultField = 'NOMECIDADE'
+      KeyFields = 'IDCIDADE'
+      Size = 50
+      Lookup = True
     end
   end
 end
