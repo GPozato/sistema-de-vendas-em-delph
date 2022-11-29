@@ -18,7 +18,9 @@ object modulo: Tmodulo
     Top = 32
   end
   object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
-    VendorLib = 'C:\Users\etec\Desktop\versao_1011\libmysql.dll'
+    VendorLib = 
+      'C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\libmys' +
+      'ql.dll'
     Left = 336
     Top = 32
   end
@@ -187,5 +189,113 @@ object modulo: Tmodulo
       FieldName = 'HORAAGENDA'
       Origin = 'HORAAGENDA'
     end
+  end
+  object qryVenda: TFDQuery
+    Connection = conexao
+    SQL.Strings = (
+      'select v.*, c.nomecliente from venda v, cliente c'
+      ' where v.idcliente = c.idcliente        ')
+    Left = 392
+    Top = 120
+    object qryVendaIDVENDA: TIntegerField
+      FieldName = 'IDVENDA'
+      Origin = 'IDVENDA'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryVendaDATAVENDA: TDateField
+      AutoGenerateValue = arDefault
+      FieldName = 'DATAVENDA'
+      Origin = 'DATAVENDA'
+    end
+    object qryVendaHORAVENDA: TTimeField
+      AutoGenerateValue = arDefault
+      FieldName = 'HORAVENDA'
+      Origin = 'HORAVENDA'
+    end
+    object qryVendaVALORVENDA: TBCDField
+      AutoGenerateValue = arDefault
+      FieldName = 'VALORVENDA'
+      Origin = 'VALORVENDA'
+      Precision = 8
+      Size = 2
+    end
+    object qryVendaIDCLIENTE: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'IDCLIENTE'
+      Origin = 'IDCLIENTE'
+    end
+    object qryVendanomecliente: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'nomecliente'
+      Origin = 'NOMECLIENTE'
+      ProviderFlags = []
+      ReadOnly = True
+      Size = 50
+    end
+  end
+  object XPManifest1: TXPManifest
+    Left = 288
+    Top = 192
+  end
+  object qryItensVenda: TFDQuery
+    OnCalcFields = qryItensVendaCalcFields
+    Connection = conexao
+    SQL.Strings = (
+      'SELECT IV.*,'
+      '       P.DESCRPRODUTO '
+      '  FROM ITENSVENDA IV,'
+      '       PRODUTO P'
+      ' WHERE IV.IDPRODUTO = P.IDPRODUTO')
+    Left = 384
+    Top = 200
+    object qryItensVendaIDVENDA: TIntegerField
+      FieldName = 'IDVENDA'
+      Origin = 'IDVENDA'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryItensVendaIDPRODUTO: TIntegerField
+      FieldName = 'IDPRODUTO'
+      Origin = 'IDPRODUTO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryItensVendaIDITENS: TIntegerField
+      FieldName = 'IDITENS'
+      Origin = 'IDITENS'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryItensVendaVALORESITENS: TBCDField
+      AutoGenerateValue = arDefault
+      FieldName = 'VALORESITENS'
+      Origin = 'VALORESITENS'
+      Precision = 8
+      Size = 2
+    end
+    object qryItensVendaQTDEITENS: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'QTDEITENS'
+      Origin = 'QTDEITENS'
+    end
+    object qryItensVendaDESCRPRODUTO: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'DESCRPRODUTO'
+      Origin = 'DESCRPRODUTO'
+      ProviderFlags = []
+      ReadOnly = True
+      Size = 50
+    end
+    object qryItensVendaTOTALITEM: TCurrencyField
+      FieldKind = fkCalculated
+      FieldName = 'TOTALITEM'
+      Calculated = True
+    end
+  end
+  object qryPesqProduto: TFDQuery
+    Connection = conexao
+    Left = 472
+    Top = 120
   end
 end

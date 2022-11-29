@@ -14,8 +14,8 @@
     <Transaction>2022/10/27 20:01:00.000.852,C:\Users\edriano.campana\Desktop\versao_2510\Unit1.dfm=C:\Users\edriano.campana\Desktop\versao_2510\untModulo.dfm</Transaction>
     <Transaction>2022/10/27 20:01:00.000.852,C:\Users\edriano.campana\Desktop\versao_2510\Unit1.pas=C:\Users\edriano.campana\Desktop\versao_2510\untModulo.pas</Transaction>
     <Transaction>2022/10/27 20:23:38.000.583,=C:\Users\edriano.campana\Desktop\versao_2510\Unit1.pas</Transaction>
-    <Transaction>2022/10/27 20:25:21.000.926,C:\Users\edriano.campana\Desktop\versao_2510\Unit1.pas=C:\Users\edriano.campana\Desktop\versao_2510\untCadCidade.pas</Transaction>
     <Transaction>2022/10/27 20:25:21.000.926,C:\Users\edriano.campana\Desktop\versao_2510\Unit1.dfm=C:\Users\edriano.campana\Desktop\versao_2510\untCadCidade.dfm</Transaction>
+    <Transaction>2022/10/27 20:25:21.000.926,C:\Users\edriano.campana\Desktop\versao_2510\Unit1.pas=C:\Users\edriano.campana\Desktop\versao_2510\untCadCidade.pas</Transaction>
     <Transaction>2022/11/01 19:44:09.000.036,=C:\Users\edriano.campana\Desktop\versao_3110\Unit1.pas</Transaction>
     <Transaction>2022/11/01 19:44:47.000.594,C:\Users\edriano.campana\Desktop\versao_3110\Unit1.dfm=C:\Users\edriano.campana\Desktop\versao_3110\untCadProduto.dfm</Transaction>
     <Transaction>2022/11/01 19:44:47.000.594,C:\Users\edriano.campana\Desktop\versao_3110\Unit1.pas=C:\Users\edriano.campana\Desktop\versao_3110\untCadProduto.pas</Transaction>
@@ -26,13 +26,20 @@
     <Transaction>2022/11/08 19:29:20.000.500,C:\Users\edriano.campana\Desktop\versao_0311\Unit1.dfm=C:\Users\edriano.campana\Desktop\versao_0311\untPadraoPesquisa.dfm</Transaction>
     <Transaction>2022/11/08 19:29:20.000.500,C:\Users\edriano.campana\Desktop\versao_0311\Unit1.pas=C:\Users\edriano.campana\Desktop\versao_0311\untPadraoPesquisa.pas</Transaction>
     <Transaction>2022/11/08 19:44:51.000.639,=C:\Users\edriano.campana\Desktop\versao_0311\Unit1.pas</Transaction>
-    <Transaction>2022/11/08 19:45:22.000.797,C:\Users\edriano.campana\Desktop\versao_0311\Unit1.dfm=C:\Users\edriano.campana\Desktop\versao_0311\untPesCidade.dfm</Transaction>
     <Transaction>2022/11/08 19:45:22.000.797,C:\Users\edriano.campana\Desktop\versao_0311\Unit1.pas=C:\Users\edriano.campana\Desktop\versao_0311\untPesCidade.pas</Transaction>
+    <Transaction>2022/11/08 19:45:22.000.797,C:\Users\edriano.campana\Desktop\versao_0311\Unit1.dfm=C:\Users\edriano.campana\Desktop\versao_0311\untPesCidade.dfm</Transaction>
     <Transaction>2022/11/10 19:42:06.000.282,=C:\Users\edriano.campana\Desktop\versao_0811\Unit1.pas</Transaction>
-    <Transaction>2022/11/10 19:42:32.000.404,C:\Users\edriano.campana\Desktop\versao_0811\untPesCliente.pas=C:\Users\edriano.campana\Desktop\versao_0811\Unit1.pas</Transaction>
     <Transaction>2022/11/10 19:42:32.000.404,C:\Users\edriano.campana\Desktop\versao_0811\untPesCliente.dfm=C:\Users\edriano.campana\Desktop\versao_0811\Unit1.dfm</Transaction>
+    <Transaction>2022/11/10 19:42:32.000.404,C:\Users\edriano.campana\Desktop\versao_0811\untPesCliente.pas=C:\Users\edriano.campana\Desktop\versao_0811\Unit1.pas</Transaction>
     <Transaction>2022/11/22 19:41:38.000.378,=C:\Users\etec\Desktop\versao_1011\Unit1.pas</Transaction>
-    <Transaction>2022/11/22 19:41:48.000.178,C:\Users\etec\Desktop\versao_1011\Unit1.pas=C:\Users\etec\Desktop\versao_1011\untCadAgendaServico.pas</Transaction>
     <Transaction>2022/11/22 19:41:48.000.178,C:\Users\etec\Desktop\versao_1011\Unit1.dfm=C:\Users\etec\Desktop\versao_1011\untCadAgendaServico.dfm</Transaction>
+    <Transaction>2022/11/22 19:41:48.000.178,C:\Users\etec\Desktop\versao_1011\Unit1.pas=C:\Users\etec\Desktop\versao_1011\untCadAgendaServico.pas</Transaction>
+    <Transaction>2022/11/29 19:35:16.000.291,=C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\Unit1.pas</Transaction>
+    <Transaction>2022/11/29 19:38:22.954,=C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\Unit1.pas</Transaction>
+    <Transaction>2022/11/29 19:45:26.792,C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\untCadVenda.dfm=C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\Unit1.dfm</Transaction>
+    <Transaction>2022/11/29 19:45:26.792,C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\untCadVenda.pas=C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\Unit1.pas</Transaction>
+    <Transaction>2022/11/29 20:19:50.898,=C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\Unit1.pas</Transaction>
+    <Transaction>2022/11/29 20:26:50.893,C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\untPesProduto.pas=C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\Unit1.pas</Transaction>
+    <Transaction>2022/11/29 20:26:50.893,C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\untPesProduto.dfm=C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\Unit1.dfm</Transaction>
   </Transactions>
 </BorlandProject>

@@ -15,7 +15,9 @@ type
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
+    btnSelecionar: TBitBtn;
     procedure btnPesquisarClick(Sender: TObject);
+    procedure btnSelecionarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,7 +31,7 @@ implementation
 
 {$R *.dfm}
 
-uses untModulo;
+uses untModulo, untCadVenda;
 
 procedure TfrmPesCliente.btnPesquisarClick(Sender: TObject);
 var vPesq: string;
@@ -54,6 +56,13 @@ begin
   modulo.qryCliente.SQL.CommaText:= vPesq;
   modulo.qryCliente.Open();
 
+end;
+
+procedure TfrmPesCliente.btnSelecionarClick(Sender: TObject);
+begin
+  inherited;
+   if chamou = 'venda' then
+     modulo.qryVendanomecliente.AsString := modulo.qryClienteNOMECLIENTE.AsString;
 end;
 
 end.

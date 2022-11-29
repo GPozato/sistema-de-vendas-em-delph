@@ -1,0 +1,32 @@
+unit untCadVenda;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Data.DB, Vcl.StdCtrls;
+
+type
+  TfrmVenda = class(TForm)
+    pnlCampos: TPanel;
+    dts: TDataSource;
+    Label1: TLabel;
+    edtNomeCliente: TEdit;
+    Edit1: TEdit;
+    Label2: TLabel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmVenda: TfrmVenda;
+
+implementation
+
+{$R *.dfm}
+
+uses untModulo;
+
+end.

@@ -11,7 +11,9 @@ uses
   untPadraoPesquisa in 'untPadraoPesquisa.pas' {frmPadraoPesquisa},
   untPesCidade in 'untPesCidade.pas' {frmPesCidade},
   untPesCliente in 'untPesCliente.pas' {frmPesCliente},
-  untCadAgendaServico in 'untCadAgendaServico.pas' {frmCadAgendaServico};
+  untCadAgendaServico in 'untCadAgendaServico.pas' {frmCadAgendaServico},
+  untCadVenda in 'untCadVenda.pas' {frmVenda},
+  untPesProduto in 'untPesProduto.pas' {frmPadraoPesquisa1};
 
 {$R *.res}
 

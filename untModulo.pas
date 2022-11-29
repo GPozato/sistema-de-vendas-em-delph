@@ -8,7 +8,7 @@ uses
   FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.MySQL,
   FireDAC.Phys.MySQLDef, FireDAC.VCLUI.Wait, FireDAC.Comp.UI, Data.DB,
   FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf,
-  FireDAC.DApt, FireDAC.Comp.DataSet;
+  FireDAC.DApt, FireDAC.Comp.DataSet, Vcl.XPMan;
 
 type
   Tmodulo = class(TDataModule)
@@ -40,6 +40,24 @@ type
     qryAgendaServicoDATAAGENDA: TDateField;
     qryAgendaServicoHORAAGENDA: TTimeField;
     qryClienteCAMINHO: TStringField;
+    qryVenda: TFDQuery;
+    qryVendaIDVENDA: TIntegerField;
+    qryVendaDATAVENDA: TDateField;
+    qryVendaHORAVENDA: TTimeField;
+    qryVendaVALORVENDA: TBCDField;
+    qryVendaIDCLIENTE: TIntegerField;
+    XPManifest1: TXPManifest;
+    qryItensVenda: TFDQuery;
+    qryItensVendaIDVENDA: TIntegerField;
+    qryItensVendaIDPRODUTO: TIntegerField;
+    qryItensVendaIDITENS: TIntegerField;
+    qryItensVendaVALORESITENS: TBCDField;
+    qryItensVendaQTDEITENS: TIntegerField;
+    qryItensVendaDESCRPRODUTO: TStringField;
+    qryItensVendaTOTALITEM: TCurrencyField;
+    qryVendanomecliente: TStringField;
+    qryPesqProduto: TFDQuery;
+    procedure qryItensVendaCalcFields(DataSet: TDataSet);
   private
     { Private declarations }
   public
@@ -72,6 +90,11 @@ begin
         AutoNum := '1'
      else
         AutoNum := qryAutoNum.fields[0].AsString;
+end;
+
+procedure Tmodulo.qryItensVendaCalcFields(DataSet: TDataSet);
+begin
+    qryItensVendaTOTALITEM.AsCurrency := qryItensVendaQTDEITENS.AsInteger * qryItensVendaVALORESITENS.AsCurrency;
 end;
 
 end.
