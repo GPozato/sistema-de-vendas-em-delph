@@ -33,6 +33,13 @@ type
     qryClienteFONECLIENTE: TStringField;
     qryClienteIDCIDADE: TIntegerField;
     qryClienteNOMECIDADE: TStringField;
+    qryAgendaServico: TFDQuery;
+    qryAgendaServicoIDAGENDA: TIntegerField;
+    qryAgendaServicoNAME: TStringField;
+    qryAgendaServicoDESCAGENDA: TStringField;
+    qryAgendaServicoDATAAGENDA: TDateField;
+    qryAgendaServicoHORAAGENDA: TTimeField;
+    qryClienteCAMINHO: TStringField;
   private
     { Private declarations }
   public

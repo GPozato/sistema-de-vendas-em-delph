@@ -10,8 +10,8 @@ uses
 type
   TfrmPadraoPesquisa = class(TForm)
     pnlPesquisa: TPanel;
-    btnPesquisar: TBitBtn;
     btnFechar: TBitBtn;
+    btnPesquisar: TBitBtn;
     dbgPesquisa: TDBGrid;
     dtsPesquisa: TDataSource;
     pnlCampos: TPanel;
@@ -31,7 +31,7 @@ implementation
 
 procedure TfrmPadraoPesquisa.btnFecharClick(Sender: TObject);
 begin
-  close;
+     close;
 end;
 
 end.

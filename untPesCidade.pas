@@ -11,8 +11,8 @@ type
   TfrmPesCidade = class(TfrmPadraoPesquisa)
     Label1: TLabel;
     edtCod: TEdit;
-    Label2: TLabel;
     edtNome: TEdit;
+    Label2: TLabel;
     procedure btnPesquisarClick(Sender: TObject);
   private
     { Private declarations }

@@ -18,11 +18,13 @@ type
     stsBar: TStatusBar;
     Timer: TTimer;
     Image1: TImage;
+    Agenda1: TMenuItem;
     procedure TimerTimer(Sender: TObject);
     procedure Sair1Click(Sender: TObject);
     procedure Cidade1Click(Sender: TObject);
     procedure Produto1Click(Sender: TObject);
     procedure Cliente1Click(Sender: TObject);
+    procedure Agenda1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -36,7 +38,13 @@ implementation
 
 {$R *.dfm}
 
-uses untCadCidade, untCadProduto, untCadCliente;
+uses untCadCidade, untCadProduto, untCadCliente, untCadAgendaServico;
+
+procedure TfrmPrincipal.Agenda1Click(Sender: TObject);
+begin
+   Application.CreateForm(TfrmCadAgendaServico, frmCadAgendaServico);
+   frmCadAgendaServico.Show;
+end;
 
 procedure TfrmPrincipal.Cidade1Click(Sender: TObject);
 begin

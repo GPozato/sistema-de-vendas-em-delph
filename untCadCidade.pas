@@ -42,7 +42,7 @@ procedure TfrmCadCidade.btnPesquisarClick(Sender: TObject);
 begin
   inherited;
   Application.CreateForm(TfrmPesCidade,frmPesCidade);
-  frmPesCidade.Show;
+  frmPesCidade.show;
 end;
 
 end.

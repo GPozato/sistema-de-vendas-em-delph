@@ -22,10 +22,17 @@ type
     Label6: TLabel;
     DBEdit6: TDBEdit;
     dblCidade: TDBLookupComboBox;
+    Image: TImage;
+    OpenDialog1: TOpenDialog;
+    BitBtn1: TBitBtn;
+    BitBtn2: TBitBtn;
     procedure btnAdicionarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure btnPesquisarClick(Sender: TObject);
+    procedure BitBtn1Click(Sender: TObject);
+    procedure BitBtn2Click(Sender: TObject);
+    procedure dtsDataChange(Sender: TObject; Field: TField);
   private
     { Private declarations }
   public
@@ -39,7 +46,31 @@ implementation
 
 {$R *.dfm}
 
-uses untModulo, untPesCidade;
+uses untModulo, untPesCliente;
+
+procedure TfrmCadCliente.BitBtn1Click(Sender: TObject);
+var caminho: string;
+begin
+  inherited;
+  modulo.qryCliente.edit;
+  Image.Picture := nil;
+  OpenDialog1.Execute();
+  caminho := ExtractFilePATH(OpenDialog1.FileName);
+  caminho := caminho + ExtractFileName(OpenDialog1.FileName);
+  modulo.qryClienteCAMINHO.Value := caminho;
+  modulo.qryCliente.Post;
+end;
+
+procedure TfrmCadCliente.BitBtn2Click(Sender: TObject);
+begin
+  if Application.MessageBox('Deseja excluir esta imagem?','Exclusão', mb_YesNo) = IDYes then
+begin
+modulo.qryCliente.Edit;
+modulo.qryClienteCAMINHO.Value := '';
+modulo.qryCliente.Post;
+end;
+
+end;
 
 procedure TfrmCadCliente.btnAdicionarClick(Sender: TObject);
 begin
@@ -50,8 +81,25 @@ end;
 procedure TfrmCadCliente.btnPesquisarClick(Sender: TObject);
 begin
   inherited;
-  Application.CreateForm(TFrmPesCidade,frmPesCidade);
-  frmPesCidade.Show;
+  Application.CreateForm(TfrmPesCliente,frmPesCliente);
+  frmPesCliente.Show;
+end;
+
+procedure TfrmCadCliente.dtsDataChange(Sender: TObject; Field: TField);
+begin
+  inherited;
+
+if modulo.qryClienteCAMINHO.Value = '' then
+begin
+  Image.Picture := Nil;
+end
+else
+begin
+// ... no modo de navegação se não estiver em branco...
+if dts.State in [dsBrowse] then
+// ... a imagem é carregada.
+Image.Picture.LoadFromFile(modulo.qryClienteCAMINHO.Value);
+end;
 end;
 
 procedure TfrmCadCliente.FormCreate(Sender: TObject);

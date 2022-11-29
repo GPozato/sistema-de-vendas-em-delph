@@ -7,6 +7,7 @@ object modulo: Tmodulo
       'Database=venda'
       'User_Name=root'
       'DriverID=MySQL')
+    Connected = True
     LoginPrompt = False
     Left = 56
     Top = 32
@@ -17,7 +18,7 @@ object modulo: Tmodulo
     Top = 32
   end
   object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
-    VendorLib = 'C:\Users\etec\Desktop\versao_0311\libmysql.dll'
+    VendorLib = 'C:\Users\etec\Desktop\versao_1011\libmysql.dll'
     Left = 336
     Top = 32
   end
@@ -144,6 +145,47 @@ object modulo: Tmodulo
       KeyFields = 'IDCIDADE'
       Size = 50
       Lookup = True
+    end
+    object qryClienteCAMINHO: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'CAMINHO'
+      Origin = 'CAMINHO'
+      Size = 255
+    end
+  end
+  object qryAgendaServico: TFDQuery
+    Connection = conexao
+    SQL.Strings = (
+      'SELECT * FROM AGENDASERVICO')
+    Left = 168
+    Top = 192
+    object qryAgendaServicoIDAGENDA: TIntegerField
+      FieldName = 'IDAGENDA'
+      Origin = 'IDAGENDA'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryAgendaServicoNAME: TStringField
+      FieldName = 'NAME'
+      Origin = 'NAME'
+      Required = True
+      Size = 50
+    end
+    object qryAgendaServicoDESCAGENDA: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'DESCAGENDA'
+      Origin = 'DESCAGENDA'
+      Size = 100
+    end
+    object qryAgendaServicoDATAAGENDA: TDateField
+      AutoGenerateValue = arDefault
+      FieldName = 'DATAAGENDA'
+      Origin = 'DATAAGENDA'
+    end
+    object qryAgendaServicoHORAAGENDA: TTimeField
+      AutoGenerateValue = arDefault
+      FieldName = 'HORAAGENDA'
+      Origin = 'HORAAGENDA'
     end
   end
 end
