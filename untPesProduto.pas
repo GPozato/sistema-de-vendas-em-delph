@@ -9,6 +9,7 @@ uses
 
 type
   TfrmPadraoPesquisa1 = class(TfrmPadraoPesquisa)
+    btnSelecionar: TBitBtn;
   private
     { Private declarations }
   public

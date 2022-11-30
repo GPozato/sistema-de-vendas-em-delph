@@ -52,6 +52,19 @@ procedure TfrmCadCliente.BitBtn1Click(Sender: TObject);
 var caminho: string;
 begin
   inherited;
+  if (dts.State = dsInsert) or (dts.State = dsEdit) then
+  begin
+  Image.Picture := nil;
+  OpenDialog1.Execute();
+  caminho := ExtractFilePATH(OpenDialog1.FileName);
+  caminho := caminho + ExtractFileName(OpenDialog1.FileName);
+  modulo.qryClienteCAMINHO.Value := caminho;
+  //modulo.qryCliente.Post;
+
+  end
+  else
+  begin
+
   modulo.qryCliente.edit;
   Image.Picture := nil;
   OpenDialog1.Execute();
@@ -59,6 +72,7 @@ begin
   caminho := caminho + ExtractFileName(OpenDialog1.FileName);
   modulo.qryClienteCAMINHO.Value := caminho;
   modulo.qryCliente.Post;
+  end;
 end;
 
 procedure TfrmCadCliente.BitBtn2Click(Sender: TObject);
