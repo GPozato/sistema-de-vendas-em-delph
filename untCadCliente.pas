@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, untPadrao, Data.DB, Vcl.Grids,
-  Vcl.DBGrids, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, Vcl.Mask, Vcl.DBCtrls;
+  Vcl.DBGrids, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, Vcl.Mask, Vcl.DBCtrls,
+  Vcl.ExtDlgs;
 
 type
   TfrmCadCliente = class(TfrmPadrao)
@@ -23,9 +24,9 @@ type
     DBEdit6: TDBEdit;
     dblCidade: TDBLookupComboBox;
     Image: TImage;
-    OpenDialog1: TOpenDialog;
     BitBtn1: TBitBtn;
     BitBtn2: TBitBtn;
+    OpenPictureDialog1: TOpenPictureDialog;
     procedure btnAdicionarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -46,7 +47,7 @@ implementation
 
 {$R *.dfm}
 
-uses untModulo, untPesCliente;
+uses untModulo, untPesCliente, Vcl.Imaging.jpeg;
 
 procedure TfrmCadCliente.BitBtn1Click(Sender: TObject);
 var caminho: string;
@@ -55,9 +56,9 @@ begin
   if (dts.State = dsInsert) or (dts.State = dsEdit) then
   begin
   Image.Picture := nil;
-  OpenDialog1.Execute();
-  caminho := ExtractFilePATH(OpenDialog1.FileName);
-  caminho := caminho + ExtractFileName(OpenDialog1.FileName);
+  OpenPictureDialog1.Execute();
+  caminho := ExtractFilePATH(OpenPictureDialog1.FileName);
+  caminho := caminho + ExtractFileName(OpenPictureDialog1.FileName);
   modulo.qryClienteCAMINHO.Value := caminho;
   //modulo.qryCliente.Post;
 
@@ -67,9 +68,9 @@ begin
 
   modulo.qryCliente.edit;
   Image.Picture := nil;
-  OpenDialog1.Execute();
-  caminho := ExtractFilePATH(OpenDialog1.FileName);
-  caminho := caminho + ExtractFileName(OpenDialog1.FileName);
+  OpenPictureDialog1.Execute();
+  caminho := ExtractFilePATH(OpenPictureDialog1.FileName);
+  caminho := caminho + ExtractFileName(OpenPictureDialog1.FileName);
   modulo.qryClienteCAMINHO.Value := caminho;
   modulo.qryCliente.Post;
   end;

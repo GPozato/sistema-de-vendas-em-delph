@@ -40,7 +40,7 @@ implementation
 {$R *.dfm}
 
 uses untCadCidade, untCadProduto, untCadCliente, untCadAgendaServico,
-  untCadVenda, untPesqVenda;
+  untCadVenda, untPesqVenda, untPesCliente, untPesCidade, untPesProduto;
 
 procedure TfrmPrincipal.Agenda1Click(Sender: TObject);
 begin
@@ -50,20 +50,20 @@ end;
 
 procedure TfrmPrincipal.Cidade1Click(Sender: TObject);
 begin
-    Application.CreateForm(TfrmCadCidade,frmCadCidade);
-    frmCadCidade.Show;
+    Application.CreateForm(TfrmPesCidade,frmPesCidade);
+    frmPesCidade.Show;
 end;
 
 procedure TfrmPrincipal.Cliente1Click(Sender: TObject);
 begin
-    Application.CreateForm(TfrmCadCliente,frmCadCliente);
-    frmCadCliente.show;
+    Application.CreateForm(TfrmPesCliente,frmPesCliente);
+    frmPesCliente.show;
 end;
 
 procedure TfrmPrincipal.Produto1Click(Sender: TObject);
 begin
-    Application.CreateForm(TfrmCadProduto,frmCadProduto);
-    frmCadProduto.Show;
+    Application.CreateForm(TfrmPesProduto,frmPesProduto);
+    frmPesProduto.Show;
 end;
 
 procedure TfrmPrincipal.Sair1Click(Sender: TObject);

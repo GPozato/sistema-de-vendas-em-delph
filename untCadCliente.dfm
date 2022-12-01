@@ -387,7 +387,9 @@ inherited frmCadCliente: TfrmCadCliente
     Left = 696
     Top = 256
   end
-  object OpenDialog1: TOpenDialog
+  object OpenPictureDialog1: TOpenPictureDialog
+    DefaultExt = '*.jpg'
+    FileName = 'C:\Users\natha\OneDrive\'#193'rea de Trabalho\etec\fotos\gabriel.jpg'
     Left = 632
     Top = 257
   end

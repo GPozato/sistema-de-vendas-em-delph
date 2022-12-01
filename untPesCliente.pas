@@ -16,8 +16,12 @@ type
     Label2: TLabel;
     Label3: TLabel;
     btnSelecionar: TBitBtn;
+    OpenDialog1: TOpenDialog;
+    Image1: TImage;
+    btnAdicionar: TBitBtn;
     procedure btnPesquisarClick(Sender: TObject);
     procedure btnSelecionarClick(Sender: TObject);
+    procedure btnAdicionarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -31,7 +35,14 @@ implementation
 
 {$R *.dfm}
 
-uses untModulo, untCadVenda;
+uses untModulo, untCadVenda, untCadCliente;
+
+procedure TfrmPesCliente.btnAdicionarClick(Sender: TObject);
+begin
+  inherited;
+  Application.CreateForm(TfrmCadCliente, frmCadCliente);
+  frmCadCliente.Show;
+end;
 
 procedure TfrmPesCliente.btnPesquisarClick(Sender: TObject);
 var vPesq: string;

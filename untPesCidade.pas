@@ -13,7 +13,9 @@ type
     edtCod: TEdit;
     edtNome: TEdit;
     Label2: TLabel;
+    btnAdicionar: TBitBtn;
     procedure btnPesquisarClick(Sender: TObject);
+    procedure btnAdicionarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -27,7 +29,14 @@ implementation
 
 {$R *.dfm}
 
-uses untModulo;
+uses untModulo, untCadCidade;
+
+procedure TfrmPesCidade.btnAdicionarClick(Sender: TObject);
+begin
+  inherited;
+  Application.CreateForm(TfrmCadCidade, frmCadCidade);
+  frmCadCidade.Show;
+end;
 
 procedure TfrmPesCidade.btnPesquisarClick(Sender: TObject);
 var vPesq: string;
