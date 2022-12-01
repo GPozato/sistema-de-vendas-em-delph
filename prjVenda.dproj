@@ -146,11 +146,11 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="untPesProduto.pas">
-            <Form>frmPadraoPesquisa1</Form>
+            <Form>frmPesProduto</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="untPesqVenda.pas">
-            <Form>Form1</Form>
+            <Form>frmPesVenda</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

@@ -5,11 +5,17 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, untPadraoPesquisa, Data.DB, Vcl.Grids,
-  Vcl.DBGrids, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls;
+  Vcl.DBGrids, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, Vcl.Mask, Vcl.DBCtrls;
 
 type
-  TfrmPadraoPesquisa1 = class(TfrmPadraoPesquisa)
+  TfrmPesProduto = class(TfrmPadraoPesquisa)
     btnSelecionar: TBitBtn;
+    Label1: TLabel;
+    Label2: TLabel;
+    edtCod: TDBEdit;
+    Label3: TLabel;
+    edtNome: TDBEdit;
+    procedure btnPesquisarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -17,10 +23,32 @@ type
   end;
 
 var
-  frmPadraoPesquisa1: TfrmPadraoPesquisa1;
+  frmPesProduto: TfrmPesProduto;
 
 implementation
 
 {$R *.dfm}
+
+uses untModulo, untCadProduto;
+
+procedure TfrmPesProduto.btnPesquisarClick(Sender: TObject);
+var vPesqProduto : string;
+begin
+  inherited;
+  vPesqProduto := '';
+  modulo.qryProduto.Close;
+
+  vPesqProduto := ' SELECT * FROM PRODUTO '+
+           '  WHERE IDPRODUTO IS NOT NULL ';
+
+  if edtCod.Text <> '' then
+     vPesqProduto := vPesqProduto + ' AND IDPRODUTO = '+ edtCod.Text;
+
+  if edtNome.Text <> '' then
+     vPesqProduto := vPesqProduto + ' AND NOMEPRODUTO LIKE '+ QuotedStr('%'+edtNome.Text+'%');
+
+  modulo.qryProduto.SQL.CommaText:= vPesqProduto;
+  modulo.qryProduto.Open();
+end;
 
 end.

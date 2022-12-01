@@ -61,8 +61,10 @@ end;
 procedure TfrmPesCliente.btnSelecionarClick(Sender: TObject);
 begin
   inherited;
+
    if chamou = 'venda' then
      modulo.qryVendanomecliente.AsString := modulo.qryClienteNOMECLIENTE.AsString;
+     close;
 end;
 
 end.

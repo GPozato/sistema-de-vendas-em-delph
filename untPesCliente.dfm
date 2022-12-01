@@ -9,7 +9,7 @@ inherited frmPesCliente: TfrmPesCliente
   inherited pnlPesquisa: TPanel
     Top = 312
     Width = 793
-    ExplicitTop = 395
+    ExplicitTop = 312
     ExplicitWidth = 793
     inherited btnFechar: TBitBtn
       Left = 162
@@ -143,16 +143,11 @@ inherited frmPesCliente: TfrmPesCliente
       OnClick = btnSelecionarClick
     end
   end
-  inherited dbgPesquisa: TDBGrid
-    Width = 793
-  end
-  inherited pnlCampos: TPanel
+  inherited pnlCampos: TPanel [1]
     Width = 793
     Height = 192
-    ExplicitLeft = 0
-    ExplicitTop = 120
     ExplicitWidth = 793
-    ExplicitHeight = 275
+    ExplicitHeight = 192
     object Label1: TLabel
       Left = 32
       Top = 16
@@ -195,6 +190,50 @@ inherited frmPesCliente: TfrmPesCliente
       Height = 21
       TabOrder = 2
     end
+  end
+  inherited dbgPesquisa: TDBGrid [2]
+    Width = 793
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'IDCLIENTE'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOMECLIENTE'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'ENDERCLIENTE'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CPFCLIENTE'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'FONECLIENTE'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'IDCIDADE'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOMECIDADE'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CAMINHO'
+        Visible = True
+      end>
   end
   inherited dtsPesquisa: TDataSource
     DataSet = modulo.qryCliente

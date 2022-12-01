@@ -30,6 +30,7 @@ type
     DBEdit4: TDBEdit;
     BitBtn2: TBitBtn;
     procedure BitBtn1Click(Sender: TObject);
+    procedure btnPesquisarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -44,13 +45,20 @@ implementation
 
 {$R *.dfm}
 
-uses untModulo, untPesCliente;
+uses untModulo, untPesCliente, untPesProduto;
 
 procedure TfrmVenda.BitBtn1Click(Sender: TObject);
 begin
     Application.CreateForm(TfrmPesCliente,frmPesCliente);
     chamou := 'venda';
     frmPesCliente.Show;
+end;
+
+procedure TfrmVenda.btnPesquisarClick(Sender: TObject);
+begin
+  Application.CreateForm(TFrmPesProduto, frmPesProduto);
+  frmPesProduto.Show;
+
 end;
 
 end.

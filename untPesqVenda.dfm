@@ -1,9 +1,9 @@
-object Form1: TForm1
+object frmPesVenda: TfrmPesVenda
   Left = 0
   Top = 0
-  Caption = 'Form1'
-  ClientHeight = 495
-  ClientWidth = 744
+  Caption = 'Vendas'
+  ClientHeight = 359
+  ClientWidth = 669
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,14 +16,13 @@ object Form1: TForm1
   TextHeight = 13
   object pnlBotoes: TPanel
     Left = 0
-    Top = 415
-    Width = 744
+    Top = 279
+    Width = 669
     Height = 80
     Align = alBottom
     TabOrder = 0
-    ExplicitLeft = -59
-    ExplicitTop = 363
-    ExplicitWidth = 803
+    ExplicitTop = 415
+    ExplicitWidth = 744
     object btnAdicionar: TBitBtn
       Left = 1
       Top = 0
@@ -146,6 +145,7 @@ object Form1: TForm1
       ParentShowHint = False
       ShowHint = True
       TabOrder = 0
+      OnClick = btnAdicionarClick
     end
     object btnAlterar: TBitBtn
       Left = 75
@@ -763,6 +763,7 @@ object Form1: TForm1
       ParentShowHint = False
       ShowHint = True
       TabOrder = 5
+      OnClick = btnPesquisarClick
     end
     object btnSelecionar: TBitBtn
       Left = 445
@@ -1009,13 +1010,14 @@ object Form1: TForm1
       ParentShowHint = False
       ShowHint = True
       TabOrder = 7
+      OnClick = btnFecharClick
     end
   end
   object DBGrid1: TDBGrid
     Left = 0
     Top = 0
-    Width = 744
-    Height = 415
+    Width = 669
+    Height = 279
     Align = alClient
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
@@ -1027,5 +1029,9 @@ object Form1: TForm1
   object dts: TDataSource
     Left = 676
     Top = 440
+  end
+  object dtsVenda: TDataSource
+    Left = 616
+    Top = 295
   end
 end

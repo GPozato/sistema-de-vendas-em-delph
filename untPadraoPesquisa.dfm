@@ -11,6 +11,7 @@ object frmPadraoPesquisa: TfrmPadraoPesquisa
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnKeyDown = FormKeyDown
   PixelsPerInch = 96
   TextHeight = 13
   object pnlPesquisa: TPanel
@@ -20,7 +21,6 @@ object frmPadraoPesquisa: TfrmPadraoPesquisa
     Height = 80
     Align = alBottom
     TabOrder = 0
-    ExplicitTop = 258
     object btnFechar: TBitBtn
       Left = 74
       Top = 0
@@ -290,10 +290,6 @@ object frmPadraoPesquisa: TfrmPadraoPesquisa
     Height = 166
     Align = alClient
     TabOrder = 2
-    ExplicitLeft = 192
-    ExplicitTop = 144
-    ExplicitWidth = 185
-    ExplicitHeight = 41
   end
   object dtsPesquisa: TDataSource
     Left = 584

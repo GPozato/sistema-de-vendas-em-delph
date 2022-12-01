@@ -1,0 +1,104 @@
+unit untModulo;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.MySQL,
+  FireDAC.Phys.MySQLDef, FireDAC.VCLUI.Wait, FireDAC.Comp.UI, Data.DB,
+  FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf,
+  FireDAC.DApt, FireDAC.Comp.DataSet, Vcl.XPMan;
+
+type
+  Tmodulo = class(TDataModule)
+    conexao: TFDConnection;
+    FDGUIxWaitCursor1: TFDGUIxWaitCursor;
+    FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink;
+    qryCidade: TFDQuery;
+    qryCidadeIDCIDADE: TIntegerField;
+    qryCidadeNOMECIDADE: TStringField;
+    qryCidadeSIGLAESTADO: TStringField;
+    qryAutoNum: TFDQuery;
+    qryProduto: TFDQuery;
+    qryProdutoIDPRODUTO: TIntegerField;
+    qryProdutoDESCRPRODUTO: TStringField;
+    qryProdutoVALORPRODUTO: TBCDField;
+    qryProdutoQTDEPRODUTO: TIntegerField;
+    qryCliente: TFDQuery;
+    qryClienteIDCLIENTE: TIntegerField;
+    qryClienteNOMECLIENTE: TStringField;
+    qryClienteENDERCLIENTE: TStringField;
+    qryClienteCPFCLIENTE: TStringField;
+    qryClienteFONECLIENTE: TStringField;
+    qryClienteIDCIDADE: TIntegerField;
+    qryClienteNOMECIDADE: TStringField;
+    qryAgendaServico: TFDQuery;
+    qryAgendaServicoIDAGENDA: TIntegerField;
+    qryAgendaServicoNAME: TStringField;
+    qryAgendaServicoDESCAGENDA: TStringField;
+    qryAgendaServicoDATAAGENDA: TDateField;
+    qryAgendaServicoHORAAGENDA: TTimeField;
+    qryClienteCAMINHO: TStringField;
+    qryVenda: TFDQuery;
+    qryVendaIDVENDA: TIntegerField;
+    qryVendaDATAVENDA: TDateField;
+    qryVendaHORAVENDA: TTimeField;
+    qryVendaVALORVENDA: TBCDField;
+    qryVendaIDCLIENTE: TIntegerField;
+    XPManifest1: TXPManifest;
+    qryItensVenda: TFDQuery;
+    qryItensVendaIDVENDA: TIntegerField;
+    qryItensVendaIDPRODUTO: TIntegerField;
+    qryItensVendaIDITENS: TIntegerField;
+    qryItensVendaVALORESITENS: TBCDField;
+    qryItensVendaQTDEITENS: TIntegerField;
+    qryItensVendaDESCRPRODUTO: TStringField;
+    qryItensVendaTOTALITEM: TCurrencyField;
+    qryVendanomecliente: TStringField;
+    qryPesqProduto: TFDQuery;
+    qryPesqProdutoIDPRODUTO: TIntegerField;
+    qryPesqProdutoDESCRPRODUTO: TStringField;
+    qryPesqProdutoVALORPRODUTO: TBCDField;
+    qryPesqProdutoQTDEPRODUTO: TIntegerField;
+    procedure qryItensVendaCalcFields(DataSet: TDataSet);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    function AutoNum(id,tabela:string):string;
+  end;
+
+var
+  modulo: Tmodulo;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+{ Tmodulo }
+
+function Tmodulo.AutoNum(id, tabela: string): string;
+var vSQL: string;
+begin
+     vSQL := '';
+     qryAutoNum.close;
+
+     vSQL := 'SELECT MAX('+ id + ')+ 1 FROM '+ tabela;
+     qryAutoNum.SQL.CommaText := vSQL;
+     qryAutoNum.Open;
+
+     if qryAutoNum.fields[0].AsString = '' then
+        AutoNum := '1'
+     else
+        AutoNum := qryAutoNum.fields[0].AsString;
+end;
+
+procedure Tmodulo.qryItensVendaCalcFields(DataSet: TDataSet);
+begin
+    qryItensVendaTOTALITEM.AsCurrency := qryItensVendaQTDEITENS.AsInteger * qryItensVendaVALORESITENS.AsCurrency;
+end;
+
+end.

@@ -19,12 +19,13 @@ object modulo: Tmodulo
   end
   object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
     VendorLib = 
-      'C:\Users\etec\Documents\GitHub\sistema-de-vendas-em-delph\libmys' +
-      'ql.dll'
+      'C:\Users\natha\OneDrive\Documentos\GitHub\sistema-de-vendas-em-d' +
+      'elph\libmysql.dll'
     Left = 336
     Top = 32
   end
   object qryCidade: TFDQuery
+    Active = True
     Connection = conexao
     SQL.Strings = (
       'select * from cidade')
@@ -94,6 +95,7 @@ object modulo: Tmodulo
     end
   end
   object qryCliente: TFDQuery
+    Active = True
     Connection = conexao
     SQL.Strings = (
       'SELECT * FROM CLIENTE')
@@ -152,7 +154,7 @@ object modulo: Tmodulo
       AutoGenerateValue = arDefault
       FieldName = 'CAMINHO'
       Origin = 'CAMINHO'
-      Size = 255
+      Size = 250
     end
   end
   object qryAgendaServico: TFDQuery
@@ -292,10 +294,5 @@ object modulo: Tmodulo
       FieldName = 'TOTALITEM'
       Calculated = True
     end
-  end
-  object qryPesqProduto: TFDQuery
-    Connection = conexao
-    Left = 472
-    Top = 120
   end
 end

@@ -1,16 +1,105 @@
-inherited frmPadraoPesquisa1: TfrmPadraoPesquisa1
+inherited frmPesProduto: TfrmPesProduto
   Caption = 'Produtos'
+  ClientHeight = 349
+  ClientWidth = 654
+  Position = poMainFormCenter
+  ExplicitWidth = 670
+  ExplicitHeight = 388
   PixelsPerInch = 96
   TextHeight = 13
   inherited pnlPesquisa: TPanel
+    Top = 269
+    Width = 654
+    ExplicitLeft = -8
+    ExplicitTop = 308
+    ExplicitWidth = 670
     inherited btnFechar: TBitBtn
       Left = 161
       ExplicitLeft = 161
     end
+    inherited btnPesquisar: TBitBtn
+      OnClick = btnPesquisarClick
+    end
+  end
+  inherited dbgPesquisa: TDBGrid
+    Width = 654
+    Height = 121
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'IDPRODUTO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'DESCRPRODUTO'
+        Width = 450
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'VALORPRODUTO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'QTDEPRODUTO'
+        Visible = True
+      end>
+  end
+  inherited pnlCampos: TPanel
+    Top = 121
+    Width = 654
+    Height = 148
+    ExplicitLeft = 8
+    ExplicitTop = 115
+    ExplicitWidth = 670
+    ExplicitHeight = 181
+    object Label1: TLabel
+      Left = 56
+      Top = -16
+      Width = 33
+      Height = 13
+      Caption = 'C'#243'digo'
+    end
+    object Label2: TLabel
+      Left = 22
+      Top = 21
+      Width = 37
+      Height = 13
+      Caption = 'Numero'
+      FocusControl = edtCod
+    end
+    object Label3: TLabel
+      Left = 22
+      Top = 70
+      Width = 83
+      Height = 15
+      Caption = 'Nome do Produto'
+      FocusControl = edtNome
+    end
+    object edtCod: TDBEdit
+      Left = 22
+      Top = 36
+      Width = 134
+      Height = 21
+      DataField = 'IDPRODUTO'
+      DataSource = dtsPesquisa
+      TabOrder = 0
+    end
+    object edtNome: TDBEdit
+      Left = 22
+      Top = 89
+      Width = 435
+      Height = 21
+      DataField = 'DESCRPRODUTO'
+      DataSource = dtsPesquisa
+      TabOrder = 1
+    end
   end
   object btnSelecionar: TBitBtn [3]
     Left = 81
-    Top = 286
+    Top = 269
     Width = 75
     Height = 78
     Caption = 'Selecionar'
@@ -130,5 +219,9 @@ inherited frmPadraoPesquisa1: TfrmPadraoPesquisa1
     ParentShowHint = False
     ShowHint = True
     TabOrder = 3
+  end
+  inherited dtsPesquisa: TDataSource
+    DataSet = modulo.qryProduto
+    Top = 294
   end
 end

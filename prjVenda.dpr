@@ -13,8 +13,8 @@ uses
   untPesCliente in 'untPesCliente.pas' {frmPesCliente},
   untCadAgendaServico in 'untCadAgendaServico.pas' {frmCadAgendaServico},
   untCadVenda in 'untCadVenda.pas' {frmVenda},
-  untPesProduto in 'untPesProduto.pas' {frmPadraoPesquisa1},
-  untPesqVenda in 'untPesqVenda.pas' {Form1};
+  untPesProduto in 'untPesProduto.pas' {frmPesProduto},
+  untPesqVenda in 'untPesqVenda.pas' {frmPesVenda};
 
 {$R *.res}
 
@@ -23,6 +23,5 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(Tmodulo, modulo);
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
-  Application.CreateForm(TForm1, Form1);
   Application.Run;
 end.

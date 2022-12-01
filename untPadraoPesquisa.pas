@@ -16,6 +16,7 @@ type
     dtsPesquisa: TDataSource;
     pnlCampos: TPanel;
     procedure btnFecharClick(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
     { Private declarations }
   public
@@ -25,6 +26,9 @@ type
 var
   frmPadraoPesquisa: TfrmPadraoPesquisa;
 
+var
+  glbNivel, glbCodigo : string;
+
 implementation
 
 {$R *.dfm}
@@ -32,6 +36,14 @@ implementation
 procedure TfrmPadraoPesquisa.btnFecharClick(Sender: TObject);
 begin
      close;
+end;
+
+procedure TfrmPadraoPesquisa.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+
+  var globalPesq, globalPesqCod : string;
+
 end;
 
 end.

@@ -8,7 +8,7 @@ uses
   Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls;
 
 type
-  TForm1 = class(TForm)
+  TfrmPesVenda = class(TForm)
     pnlBotoes: TPanel;
     btnAdicionar: TBitBtn;
     btnAlterar: TBitBtn;
@@ -20,6 +20,10 @@ type
     btnFechar: TBitBtn;
     dts: TDataSource;
     DBGrid1: TDBGrid;
+    dtsVenda: TDataSource;
+    procedure btnPesquisarClick(Sender: TObject);
+    procedure btnAdicionarClick(Sender: TObject);
+    procedure btnFecharClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -27,12 +31,29 @@ type
   end;
 
 var
-  Form1: TForm1;
+  frmPesVenda: TfrmPesVenda;
 
 implementation
 
 {$R *.dfm}
 
-uses untModulo;
+uses untModulo, untPadraoPesquisa, untPesCliente, untCadVenda;
+
+procedure TfrmPesVenda.btnAdicionarClick(Sender: TObject);
+begin
+  Application.CreateForm(TfrmVenda, frmVenda);
+  frmVenda.Show;
+end;
+
+procedure TfrmPesVenda.btnFecharClick(Sender: TObject);
+begin
+  close;
+end;
+
+procedure TfrmPesVenda.btnPesquisarClick(Sender: TObject);
+begin
+  Application.CreateForm(TfrmPesCliente, frmPesCliente);
+  frmPesCliente.ShowModal;
+end;
 
 end.
