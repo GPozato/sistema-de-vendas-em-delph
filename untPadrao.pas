@@ -15,12 +15,12 @@ type
     btnExcluir: TBitBtn;
     btnSalvar: TBitBtn;
     btnCancelar: TBitBtn;
-    btnPesquisar: TBitBtn;
     btnSelecionar: TBitBtn;
     btnFechar: TBitBtn;
     dts: TDataSource;
     dbg: TDBGrid;
     pnlCampos: TPanel;
+    btnPesquisar: TBitBtn;
     procedure btnAdicionarClick(Sender: TObject);
     procedure btnAlterarClick(Sender: TObject);
     procedure btnExcluirClick(Sender: TObject);
@@ -97,7 +97,7 @@ begin
      btnExcluir.Enabled := ativa;
      btnSalvar.Enabled := not ativa;
      btnCancelar.Enabled := not ativa;
-     btnPesquisar.Enabled := ativa;
+     btnPesquisar.Enabled:= ativa;
      btnSelecionar.Enabled := ativa;
      btnFechar.Enabled := ativa;
 end;

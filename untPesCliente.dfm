@@ -2,6 +2,7 @@ inherited frmPesCliente: TfrmPesCliente
   Caption = 'Pesquisa de Clientes'
   ClientHeight = 392
   ClientWidth = 793
+  ExplicitTop = -29
   ExplicitWidth = 809
   ExplicitHeight = 431
   PixelsPerInch = 96
@@ -12,8 +13,8 @@ inherited frmPesCliente: TfrmPesCliente
     ExplicitTop = 312
     ExplicitWidth = 793
     inherited btnFechar: TBitBtn
-      Left = 162
-      ExplicitLeft = 162
+      Left = 634
+      ExplicitLeft = 634
     end
     inherited btnPesquisar: TBitBtn
       OnClick = btnPesquisarClick
@@ -143,7 +144,7 @@ inherited frmPesCliente: TfrmPesCliente
       OnClick = btnSelecionarClick
     end
     object btnAdicionar: TBitBtn
-      Left = 243
+      Left = 162
       Top = 0
       Width = 75
       Height = 78
@@ -270,7 +271,6 @@ inherited frmPesCliente: TfrmPesCliente
   inherited pnlCampos: TPanel [1]
     Width = 793
     Height = 192
-    ExplicitTop = 126
     ExplicitWidth = 793
     ExplicitHeight = 192
     object Label1: TLabel

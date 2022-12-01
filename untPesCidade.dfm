@@ -3,11 +3,15 @@ inherited frmPesCidade: TfrmPesCidade
   PixelsPerInch = 96
   TextHeight = 13
   inherited pnlPesquisa: TPanel
+    inherited btnFechar: TBitBtn
+      Left = 482
+      ExplicitLeft = 482
+    end
     inherited btnPesquisar: TBitBtn
       OnClick = btnPesquisarClick
     end
     object btnAdicionar: TBitBtn
-      Left = 242
+      Left = 78
       Top = 0
       Width = 75
       Height = 78

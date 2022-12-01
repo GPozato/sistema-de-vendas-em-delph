@@ -13,14 +13,14 @@ inherited frmPesProduto: TfrmPesProduto
     ExplicitTop = 269
     ExplicitWidth = 654
     inherited btnFechar: TBitBtn
-      Left = 161
-      ExplicitLeft = 161
+      Left = 497
+      ExplicitLeft = 497
     end
     inherited btnPesquisar: TBitBtn
       OnClick = btnPesquisarClick
     end
     object btnAdicionar: TBitBtn
-      Left = 242
+      Left = 162
       Top = 0
       Width = 75
       Height = 78
@@ -344,6 +344,7 @@ inherited frmPesProduto: TfrmPesProduto
   end
   inherited dtsPesquisa: TDataSource
     DataSet = modulo.qryProduto
+    Left = 600
     Top = 294
   end
 end
