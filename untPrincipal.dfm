@@ -23681,7 +23681,7 @@ object frmPrincipal: TfrmPrincipal
   end
   object menu: TMainMenu
     Left = 16
-    Top = 40
+    Top = 128
     object Cadastros1: TMenuItem
       Caption = 'Cadastros'
       object Cidade1: TMenuItem
@@ -23713,6 +23713,6 @@ object frmPrincipal: TfrmPrincipal
   object Timer: TTimer
     OnTimer = TimerTimer
     Left = 64
-    Top = 40
+    Top = 128
   end
 end

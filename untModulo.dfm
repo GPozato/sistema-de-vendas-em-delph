@@ -295,4 +295,11 @@ object modulo: Tmodulo
       Calculated = True
     end
   end
+  object qrryUSUARIO: TFDQuery
+    Connection = conexao
+    SQL.Strings = (
+      'SELECT * FROM USUARIO')
+    Left = 456
+    Top = 32
+  end
 end

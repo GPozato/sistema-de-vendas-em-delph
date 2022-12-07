@@ -102,56 +102,50 @@
         </DelphiCompile>
         <DCCReference Include="untPrincipal.pas">
             <Form>frmPrincipal</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="untPadrao.pas">
             <Form>frmPadrao</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="untModulo.pas">
             <Form>modulo</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="untCadCidade.pas">
             <Form>frmCadCidade</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="untCadProduto.pas">
             <Form>frmCadProduto</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="untCadCliente.pas">
             <Form>frmCadCliente</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="untPadraoPesquisa.pas">
             <Form>frmPadraoPesquisa</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="untPesCidade.pas">
             <Form>frmPesCidade</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="untPesCliente.pas">
             <Form>frmPesCliente</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="untCadAgendaServico.pas">
             <Form>frmCadAgendaServico</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="untCadVenda.pas">
             <Form>frmVenda</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="untPesProduto.pas">
             <Form>frmPesProduto</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="untPesqVenda.pas">
             <Form>frmPesVenda</Form>
-            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="untLogin.pas">
+            <Form>frmLogin</Form>
+        </DCCReference>
+        <DCCReference Include="untDMPrincipal.pas">
+            <Form>DMPrincipal</Form>
+            <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>

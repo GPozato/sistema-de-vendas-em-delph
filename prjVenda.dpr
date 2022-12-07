@@ -2,6 +2,8 @@ program prjVenda;
 
 uses
   Vcl.Forms,
+  Controls,
+  SysUtils,
   untPrincipal in 'untPrincipal.pas' {frmPrincipal},
   untPadrao in 'untPadrao.pas' {frmPadrao},
   untModulo in 'untModulo.pas' {modulo: TDataModule},
@@ -14,7 +16,9 @@ uses
   untCadAgendaServico in 'untCadAgendaServico.pas' {frmCadAgendaServico},
   untCadVenda in 'untCadVenda.pas' {frmVenda},
   untPesProduto in 'untPesProduto.pas' {frmPesProduto},
-  untPesqVenda in 'untPesqVenda.pas' {frmPesVenda};
+  untPesqVenda in 'untPesqVenda.pas' {frmPesVenda},
+  untLogin in 'untLogin.pas' {frmLogin},
+  untDMPrincipal in 'untDMPrincipal.pas' {DMPrincipal: TDataModule};
 
 {$R *.res}
 
@@ -22,6 +26,19 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(Tmodulo, modulo);
-  Application.CreateForm(TfrmPrincipal, frmPrincipal);
-  Application.Run;
+  Application.CreateForm(TDMPrincipal, DMPrincipal);
+  Application.CreateForm(TfrmLogin, frmLogin);
+  frmLogin := TfrmLogin.Create(nil);
+  if frmLogin.ShowModal = mrOk then
+  begin
+    FreeAndNil(frmLogin);
+    Application.CreateForm(TfrmPrincipal, frmPrincipal);
+    Application.Run;
+    Application.CreateForm(TfrmPrincipal, frmPrincipal);
+    frmLogin.Hide;
+    frmLogin.Free;
+    Application.Run;
+  end
+  else
+  Application.Terminate;
 end.

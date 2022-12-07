@@ -1,0 +1,28 @@
+unit untDMPrincipal;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DBXInterBase, Data.FMTBcd, Data.DB,
+  Data.SqlExpr;
+
+type
+  TDMPrincipal = class(TDataModule)
+    ConLOGIN: TSQLConnection;
+    datasetAux: TSQLDataSet;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DMPrincipal: TDMPrincipal;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

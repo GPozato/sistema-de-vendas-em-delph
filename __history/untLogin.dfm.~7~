@@ -1,0 +1,246 @@
+object frmLogin: TfrmLogin
+  Left = 0
+  Top = 0
+  BorderStyle = bsNone
+  ClientHeight = 406
+  ClientWidth = 538
+  Color = clBackground
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnlFundo: TPanel
+    Left = 0
+    Top = 0
+    Width = 538
+    Height = 406
+    Align = alClient
+    BiDiMode = bdRightToLeftNoAlign
+    Color = clWhite
+    ParentBiDiMode = False
+    ParentBackground = False
+    TabOrder = 0
+    ExplicitWidth = 537
+    object Label4: TLabel
+      Left = 253
+      Top = 42
+      Width = 247
+      Height = 27
+      Alignment = taCenter
+      Caption = 'Digite seu Uuario e Senha'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -21
+      Font.Name = 'Tempus Sans ITC'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object SpeedButton2: TSpeedButton
+      Left = 512
+      Top = 1
+      Width = 23
+      Height = 22
+      Cursor = crHandPoint
+      Caption = 'X'
+      Flat = True
+      OnClick = SpeedButton2Click
+    end
+    object pnlLateral: TPanel
+      Left = 1
+      Top = 1
+      Width = 232
+      Height = 404
+      Align = alLeft
+      BevelOuter = bvNone
+      Color = 15000804
+      ParentBackground = False
+      TabOrder = 0
+      ExplicitLeft = 0
+      object Label1: TLabel
+        Left = 21
+        Top = 48
+        Width = 183
+        Height = 17
+        Alignment = taCenter
+        Caption = 'Bem Vindos ao Bellotti Bikes'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Tempus Sans ITC'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label2: TLabel
+        Left = 54
+        Top = 384
+        Width = 174
+        Height = 15
+        Alignment = taCenter
+        Caption = 'Desenvolvido por GABRIEL POZATO'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tempus Sans ITC'
+        Font.Style = []
+        ParentFont = False
+        WordWrap = True
+      end
+      object Label3: TLabel
+        Left = 29
+        Top = 215
+        Width = 168
+        Height = 24
+        Alignment = taCenter
+        Caption = 'Sistemas de Vendas'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -19
+        Font.Name = 'Tempus Sans ITC'
+        Font.Style = [fsBold]
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = False
+      end
+      object imgLogo: TImage
+        Left = 54
+        Top = 104
+        Width = 105
+        Height = 105
+      end
+    end
+    object pnlUsuario: TPanel
+      Left = 253
+      Top = 113
+      Width = 268
+      Height = 56
+      BiDiMode = bdRightToLeftNoAlign
+      ParentBiDiMode = False
+      TabOrder = 1
+      object Label5: TLabel
+        Left = 1
+        Top = 1
+        Width = 266
+        Height = 24
+        Align = alTop
+        BiDiMode = bdLeftToRight
+        Caption = 'Nome de Usuario:'
+        Color = 15000804
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -15
+        Font.Name = 'Tempus Sans ITC'
+        Font.Style = [fsBold]
+        ParentBiDiMode = False
+        ParentColor = False
+        ParentFont = False
+      end
+      object edtUsuario: TEdit
+        Left = 1
+        Top = 25
+        Width = 266
+        Height = 29
+        Align = alClient
+        BevelOuter = bvNone
+        BorderStyle = bsNone
+        CharCase = ecUpperCase
+        TabOrder = 0
+        ExplicitTop = 20
+        ExplicitHeight = 34
+      end
+      object Panel3: TPanel
+        Left = 1
+        Top = 54
+        Width = 266
+        Height = 1
+        Align = alBottom
+        BevelOuter = bvNone
+        Color = clGray
+        ParentBackground = False
+        TabOrder = 1
+      end
+    end
+    object pnlSenha: TPanel
+      Left = 254
+      Top = 216
+      Width = 268
+      Height = 56
+      BiDiMode = bdRightToLeftNoAlign
+      ParentBiDiMode = False
+      TabOrder = 2
+      object Label7: TLabel
+        Left = 1
+        Top = 1
+        Width = 266
+        Height = 32
+        Align = alTop
+        BiDiMode = bdLeftToRight
+        Caption = 'Senha:'
+        Color = 15790320
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -15
+        Font.Name = 'Tempus Sans ITC'
+        Font.Style = [fsBold]
+        ParentBiDiMode = False
+        ParentColor = False
+        ParentFont = False
+      end
+      object edtSenha: TEdit
+        Left = 1
+        Top = 33
+        Width = 266
+        Height = 21
+        Align = alClient
+        BevelOuter = bvNone
+        BorderStyle = bsNone
+        CharCase = ecUpperCase
+        PasswordChar = '*'
+        TabOrder = 0
+      end
+      object Panel2: TPanel
+        Left = 1
+        Top = 54
+        Width = 266
+        Height = 1
+        Align = alBottom
+        BevelOuter = bvNone
+        Color = clGray
+        ParentBackground = False
+        TabOrder = 1
+      end
+    end
+    object pnlConfirma: TPanel
+      Left = 416
+      Top = 320
+      Width = 100
+      Height = 41
+      Color = 15496021
+      ParentBackground = False
+      TabOrder = 3
+      object btnConfirma: TSpeedButton
+        Left = 1
+        Top = 1
+        Width = 98
+        Height = 39
+        Cursor = crHandPoint
+        Align = alClient
+        Caption = 'Confirmar'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        ExplicitLeft = 17
+        ExplicitTop = -7
+        ExplicitWidth = 218
+      end
+    end
+  end
+end

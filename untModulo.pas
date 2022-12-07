@@ -56,6 +56,7 @@ type
     qryItensVendaDESCRPRODUTO: TStringField;
     qryItensVendaTOTALITEM: TCurrencyField;
     qryVendanomecliente: TStringField;
+    qrryUSUARIO: TFDQuery;
     procedure qryItensVendaCalcFields(DataSet: TDataSet);
   private
     { Private declarations }
